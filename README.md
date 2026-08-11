@@ -21,4 +21,8 @@ Open <http://localhost:4173>.
 - X/Y translation and rotation drive vectors
 - Drag-free keyboard controls with WASD
 - Live velocity and heading telemetry
-- Responsive visual interface
+- USB/Bluetooth gamepad support via the browser Gamepad API
+  - Left stick: translate X/Y
+  - Right stick X (or axis 3): rotate
+  - Click the controller status button to scan/connect
+- No build step required.

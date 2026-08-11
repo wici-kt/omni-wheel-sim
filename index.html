@@ -40,7 +40,7 @@
       </aside>
 
       <section class="stage-panel">
-        <div class="stage-toolbar"><div class="status"><span class="live-dot"></span> LIVE PREVIEW</div><div class="toolbar-actions"><button id="gridBtn" class="icon-button active">▦ Grid</button><button id="pauseBtn" class="icon-button">Ⅱ Pause</button></div></div>
+        <div class="stage-toolbar"><div class="status"><span class="live-dot"></span> LIVE PREVIEW</div><div class="toolbar-actions"><button id="controllerBtn" class="icon-button">⌁ Controller: waiting</button><button id="gridBtn" class="icon-button active">▦ Grid</button><button id="pauseBtn" class="icon-button">Ⅱ Pause</button></div></div>
         <div class="canvas-wrap"><canvas id="simCanvas" width="900" height="620"></canvas><div class="telemetry"><span>VELOCITY</span><strong id="velocityReadout">0.00 m/s</strong><span>HEADING</span><strong id="headingReadout">0°</strong></div><div class="drive-hint">DRAG TO DRIVE <span>•</span> OR USE WASD</div></div>
         <div class="vector-controls"><div class="vector-label"><span class="section-number">03</span><div><b>Drive vector</b><small>Translate and rotate the chassis</small></div></div><label>↔ <input id="xRange" type="range" min="-1" max="1" step="0.01" value="0"><output id="xValue">0.00</output></label><label>↕ <input id="yRange" type="range" min="-1" max="1" step="0.01" value="0"><output id="yValue">0.00</output></label><label>⟳ <input id="rotationRange" type="range" min="-1" max="1" step="0.01" value="0"><output id="rotationValue">0.00</output></label></div>
       </section>

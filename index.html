@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OmniLab — Wheelbase Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">✦</span><span>OMNI<span class="muted">LAB</span></span></div>
+    <div class="top-meta"><span class="live-dot"></span> SIMULATION ONLINE <span class="divider"></span> v1.0.0</div>
+  </header>
+
+  <main class="shell">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">ROBOTICS PLAYGROUND / KINEMATICS</p>
+        <h1>Build your <em>omni</em> machine.</h1>
+        <p class="lede">Tune wheel geometry, fire up the chassis, and see how every vector changes the ride.</p>
+      </div>
+      <div class="shortcut-card"><span>KEYBOARD</span><strong>W A S D</strong><small>drive the robot</small></div>
+    </section>
+
+    <section class="dashboard">
+      <aside class="panel controls-panel">
+        <div class="panel-head"><div><span class="section-number">01</span><h2>Chassis setup</h2></div><button id="resetBtn" class="ghost-button">↻ Reset</button></div>
+        <label class="field-label">CHASSIS TYPE</label>
+        <div class="segmented"><button class="active" data-chassis="rectangle">RECTANGULAR</button><button data-chassis="triangle">TRIANGULAR</button></div>
+        <div class="field-grid">
+          <label><span>WIDTH <b id="widthValue">2.40</b> m</span><input id="widthRange" type="range" min="1.4" max="3.6" step="0.1" value="2.4"></label>
+          <label><span>LENGTH <b id="lengthValue">3.20</b> m</span><input id="lengthRange" type="range" min="1.8" max="4.8" step="0.1" value="3.2"></label>
+        </div>
+        <div class="panel-head wheel-title"><div><span class="section-number">02</span><h2>Wheel layout <span class="count-pill" id="wheelCount">4</span></h2></div><button id="addWheelBtn" class="add-button">+ Add wheel</button></div>
+        <div id="wheelList" class="wheel-list"></div>
+        <p class="hint">Wheel angle defines the roller axis. Try opposing angles for lateral movement.</p>
+      </aside>
+
+      <section class="stage-panel">
+        <div class="stage-toolbar"><div class="status"><span class="live-dot"></span> LIVE PREVIEW</div><div class="toolbar-actions"><button id="gridBtn" class="icon-button active">▦ Grid</button><button id="pauseBtn" class="icon-button">Ⅱ Pause</button></div></div>
+        <div class="canvas-wrap"><canvas id="simCanvas" width="900" height="620"></canvas><div class="telemetry"><span>VELOCITY</span><strong id="velocityReadout">0.00 m/s</strong><span>HEADING</span><strong id="headingReadout">0°</strong></div><div class="drive-hint">DRAG TO DRIVE <span>•</span> OR USE WASD</div></div>
+        <div class="vector-controls"><div class="vector-label"><span class="section-number">03</span><div><b>Drive vector</b><small>Translate and rotate the chassis</small></div></div><label>↔ <input id="xRange" type="range" min="-1" max="1" step="0.01" value="0"><output id="xValue">0.00</output></label><label>↕ <input id="yRange" type="range" min="-1" max="1" step="0.01" value="0"><output id="yValue">0.00</output></label><label>⟳ <input id="rotationRange" type="range" min="-1" max="1" step="0.01" value="0"><output id="rotationValue">0.00</output></label></div>
+      </section>
+    </section>
+    <footer><span>OMNILAB SIMULATOR</span><span>Holonomic drive / inverse kinematics visualization</span><span>Built for experimentation ✦</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -21,6 +21,7 @@ Open <http://localhost:4173>.
 - X/Y translation, rotation, and adjustable speed (0.5–10.0 m/s)
 - Drag-free keyboard controls with WASD
 - Live velocity and heading telemetry
+- Animated wheel tread shows wheel movement while driving
 - USB/Bluetooth gamepad support via the browser Gamepad API
   - Left stick: translate X/Y
   - Right stick X (or axis 3): rotate

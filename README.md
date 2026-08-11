@@ -18,7 +18,7 @@ Open <http://localhost:4173>.
 - Per-wheel roller angle controls
 - Rectangular and triangular chassis layouts
 - Width and length tuning
-- X/Y translation and rotation drive vectors
+- X/Y translation, rotation, and adjustable speed (0.5–10.0 m/s)
 - Drag-free keyboard controls with WASD
 - Live velocity and heading telemetry
 - USB/Bluetooth gamepad support via the browser Gamepad API
